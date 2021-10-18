@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/index2",
+    "pages/map/jichu",
+    "pages/map/map"
+
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#04e4c4",
+    "navigationBarTitleText": "陕汽汽车定位服务",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh":true
+  },
+  "tabBar": {
+    "color": "#99999",
+    "selectedColor": "#d81e06",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "定位",
+        "iconPath": "images/local.png",
+        "selectedIconPath": "images/localred.png"
+      },
+      {
+        "pagePath": "pages/index/index2",
+        "text": "查找",
+        "iconPath": "images/search.png",
+        "selectedIconPath": "images/searchred.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

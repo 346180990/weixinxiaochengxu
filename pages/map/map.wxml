@@ -1,0 +1,4 @@
+ <text >{{province}} {{city}} {{qu}}</text>
+ 
+ <view>经度：{{jingdu}}</view>
+ <view>维度：{{weidu}}</view>

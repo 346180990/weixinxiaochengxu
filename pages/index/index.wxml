@@ -1,0 +1,20 @@
+<!-- 当已经授权的时候 -->
+
+<view class="input">
+  <input auto-focus placeholder="输入车号"/>
+</view>
+
+<view class="" hover-class="none" hover-stop-propagation="false">
+  <button type='primary' bindtap="getUserProfile"> 获取头像昵称 </button>
+</view>
+
+<view class="" hover-class="none" hover-stop-propagation="false">
+  <button type='primary' disabled="{{localclick}}" bindtap='xzweizhi'>位置的获取</button>
+</view>
+
+<view class="" hover-class="" hover-stop-propagation="false">
+  提示：1.先输入车号，
+  2.点击"获取头像昵称"，
+  3.点击"位置的获取"，
+  4.选好位置点击右上角确定
+</view>

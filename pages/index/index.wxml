@@ -1,7 +1,7 @@
 <!-- 当已经授权的时候 -->
 
 <view class="input">
-  <input auto-focus placeholder="输入车号"/>
+  <input auto-focus bindinput="bindKeyInput" placeholder="输入车号"/>
 </view>
 
 <view class="" hover-class="none" hover-stop-propagation="false">

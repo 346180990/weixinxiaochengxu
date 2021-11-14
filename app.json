@@ -1,10 +1,17 @@
 {
   "pages": [
+    "pages/index/login",
     "pages/index/index",
     "pages/index/index2",
+    "pages/index/index3",
     "pages/map/jichu",
-    "pages/map/map"
-
+    "pages/map/map",
+    "pages/index/adminJump",
+    "pages/index/register",
+    "pages/index/employ",
+    "pages/index/location",
+    "pages/index/waitRule",
+    "pages/index/setEmploy"
   ],
   "window": {
     "backgroundTextStyle": "dark",
@@ -31,5 +38,16 @@
       }
     ]
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序定位"
+    }
+  } ,
+  "plugins": {
+    "chooseLocation": {
+      "version": "1.0.9",
+      "provider": "wx76a9a06e5b4e693e"
+    }
+  }
 }

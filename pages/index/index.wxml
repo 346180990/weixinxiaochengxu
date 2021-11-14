@@ -1,20 +1,34 @@
 <!-- 当已经授权的时候 -->
+<map 
+  id="myMap" 
+  style="width: 416px; height: 319px;" 
+  longitude="{{longitude}}" latitude="{{latitude}}"
+  show-location 
+  enable-satellite="{{enableSatellite}}"
+   enable-3D="true">
+</map>
+
+<!-- <view class="container">
+  <button bindtap="showMap">选择位置</button>
+  <view style="margin-top:10px">地址：{{address?address:"暂无"}}</view>
+  <view style="margin-top:10px">名称：{{locationName?locationName:"暂无"}}</view>
+</view> -->
 
 <view class="input">
   <input auto-focus bindinput="bindKeyInput" placeholder="输入车号"/>
 </view>
+<text style="color: red;">{{textCarCode}}</text>
 
 <view class="" hover-class="none" hover-stop-propagation="false">
-  <button type='primary' bindtap="getUserProfile"> 获取头像昵称 </button>
+  <button type='primary' disabled="{{localclick}}" bindtap="upload"> 上传 </button>
 </view>
+<text style="color: green;">{{text}}</text>
 
-<view class="" hover-class="none" hover-stop-propagation="false">
-  <button type='primary' disabled="{{localclick}}" bindtap='xzweizhi'>位置的获取</button>
-</view>
-
+<!-- <view class="" hover-class="none" hover-stop-propagation="false">
+  <button type='primary' disabled="{{localclick}}" bindtap='xzweizhi'>获取位置</button>
+</view> -->
+<!-- <button type="primary" bindtap="getCenterLocation">获取位置</button> -->
 <view class="" hover-class="" hover-stop-propagation="false">
   提示：1.先输入车号，
-  2.点击"获取头像昵称"，
-  3.点击"位置的获取"，
-  4.选好位置点击右上角确定
+  2.点击"上传"
 </view>

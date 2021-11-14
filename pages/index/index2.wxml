@@ -1,5 +1,5 @@
 <view class="search_input">
-      <input auto-focus placeholder="搜索车辆"/>
+      <input auto-focus bindinput="bindKeyInput" placeholder="搜索车辆"/>
 </view>
 <view class="">
   <view class="table">

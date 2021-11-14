@@ -13,11 +13,10 @@ App({
       } else {
         const db = wx.cloud.database();
         const _ = db.command
-        //let viewList = [];
 
         db.collection('data').where({
           // 查看一周内数据
-          date: _.gt(new Date().getTime() - 60 * 60 * 60 * 24 * 7)
+          date: _.gt(new Date().getTime() - 1000 *60 * 60 * 60 * 24 * 7)
         })
           .get({
             success: function (res) {

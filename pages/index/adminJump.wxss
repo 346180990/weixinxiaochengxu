@@ -1,0 +1,5 @@
+/* pages/index/adminJump.wxss */
+.header text{
+  font-size: 25px;
+  color: #666;
+}

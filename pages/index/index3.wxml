@@ -1,0 +1,12 @@
+<!-- 当已经授权的时候 -->
+<map 
+  id="myMap" 
+  style="width: 416px; height: 500px;"
+  longitude="{{longitude}}" latitude="{{latitude}}"
+  show-location 
+  enable-satellite="{{enableSatellite}}"
+   enable-3D="true">
+</map>
+<view style="margin-top:10px">地址：{{address?address:"暂无"}}</view>
+<view style="margin-top:10px">名称：{{locationName?locationName:"暂无"}}</view>
+

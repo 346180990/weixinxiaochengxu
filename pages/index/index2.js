@@ -8,7 +8,9 @@ Page({
 
   data: {
     listData: [
-    ]
+    ],
+    viewLists: [
+    ],
   },
 
   /**
@@ -24,6 +26,9 @@ Page({
       this.setData({
         listData: viewLists
       })
+      this.setData({
+        viewLists: viewLists
+      })
     })
 
     //也可以借助async函数, 因为setUserInfo中使用了setData，所以需要借助call来调用
@@ -31,16 +36,25 @@ Page({
   },
   click: function (event) {
     let index = parseInt(event.currentTarget.dataset.index);
-    console.log(this.data.listData[index]);
     let jingdu = this.data.listData[index].jingdu;
     let weidu = this.data.listData[index].weidu;
-    console.log(jingdu);
-    console.log(weidu);
-    wx.openLocation({
-      latitude: weidu,
-      longitude: jingdu,
-      scale: 18
-    }) 
+    let address = this.data.listData[index].address;
+    let addressName = this.data.listData[index].addressName;
+    wx.navigateTo({
+      url: '/pages/index/index3?latitude=' + weidu + '&longitude=' + jingdu + '&address=' + address + '&addressName=' + addressName
+    })
+  },
+  bindKeyInput: function (e) {
+    let input = e.detail.value;
+    let newArray = []
+    for (let index of this.data.viewLists) {
+      if (index.code.indexOf(input) != -1) {
+        newArray.push(index);
+      }
+    }
+    this.setData({
+      listData: newArray
+    })
   },
   onShow: function () {
 
@@ -83,6 +97,9 @@ Page({
       }
       this.setData({
         listData: viewLists
+      })
+      this.setData({
+        viewLists: viewLists
       })
     })
 

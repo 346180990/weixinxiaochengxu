@@ -1,0 +1,32 @@
+<!--pages/index/setEmploy.wxml-->
+
+<form bindsubmit="formSubmit">
+  <view class='section'>
+    <text>工号：</text>
+    <input type='number' placeholder='请输入工号' name="no" value='{{employNo}}'/>
+  </view>
+  <view class='section'>
+    <text>姓名：</text>
+    <input type='number' placeholder='请输入姓名' name="name" value='{{name}}'/>
+  </view>
+  <view class='section'>
+    <text>车队：</text>
+    <input type='number' placeholder='请输入车队' name="fleet" value='{{fleet}}'/>
+  </view>
+  <text>设置权限</text>  
+  <view class="page__bd">
+    <view class="section section_gap">
+        <radio-group class="radio-group" bindchange="radioChange">
+            <radio class="radio" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+                <text>{{item.value}}</text>
+            </radio>
+        </radio-group>
+    </view>
+  </view>
+  <view class='button'>
+    <button type='primary' bindtap="act">确定</button>
+  </view>
+  <view class='button'>
+    <button type='primary' bindtap="delete">删除员工</button>
+  </view>
+</form>

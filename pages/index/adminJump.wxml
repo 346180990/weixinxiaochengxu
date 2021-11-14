@@ -1,0 +1,10 @@
+<!--pages/index/adminJump.wxml-->
+<view class='header'>
+  <text>管理</text>
+</view>
+<view class="" hover-class="none" hover-stop-propagation="false">
+  <button type='primary'  bindtap="getEmploy"> 跳转员工管理 </button>
+</view>
+<view class="" hover-class="none" hover-stop-propagation="false">
+  <button type='primary'  bindtap="getSystem"> 跳转系统定位管理 </button>
+</view>

@@ -1,0 +1,48 @@
+form{
+    width: 310px;
+    height: 320px;
+    line-height: 40px;
+    /* border: 1px solid red;  */
+  }
+  input{
+    border: 1px solid #ccc;
+    width: 310px;
+    height: 40px;
+  }
+  .button{
+    margin-top: 20px;
+  }
+  .header text{
+    font-size: 25px;
+    color: #666;
+  }
+  form text{
+    font-size: 20px;
+    color: #666;
+  }
+  .fpwd{
+    margin-top: 200px;
+  }
+  .fpwd text{
+    color: #ccc;
+    font-size: 18px;
+  }
+
+  .contentImage {
+    width: 100vw;
+}
+
+.bg{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-size:cover;
+  z-index:-1;
+  }
+  
+  .bg-img{
+      width : 140vw;
+      height : 150vw;
+  }

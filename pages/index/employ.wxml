@@ -1,0 +1,28 @@
+<!--pages/index/employ.wxml-->
+<view class="search_input">
+  <input auto-focus bindinput="bindKeyInput" placeholder="搜索工号"/>
+</view>
+<view class="">
+<view class="table">
+<view class="tr bg-w">
+<view class="th1">工号</view>
+<view class="th2">姓名</view>
+<view class="th3">车队</view>
+<view class="th3">权限</view>
+</view>
+<block wx:for="{{listData}}" wx:key="{[_id]}">
+<view class="tr bg-g" bindtap="click" data-index="{{index}}" wx:if="{{index % 2 == 0}}">
+<view class="td1" bindtap="click" data-index="{{index}}">{{item.employNo}}</view>
+<view class="td2" bindtap="click" data-index="{{index}}">{{item.name}}</view>
+<view class="td3" bindtap="click" data-index="{{index}}">{{item.fleet}}</view>
+<view class="td3" bindtap="click" data-index="{{index}}">{{item.role}}</view>
+</view>
+<view class="tr" bindtap="click" data-index="{{index}}" wx:else>
+<view class="td1" bindtap="click" data-index="{{index}}">{{item.employNo}}</view>
+<view class="td2" bindtap="click" data-index="{{index}}">{{item.name}}</view>
+<view class="td3" bindtap="click" data-index="{{index}}">{{item.fleet}}</view>
+<view class="td3" bindtap="click" data-index="{{index}}">{{item.role}}</view>
+</view>
+</block>
+</view>
+</view>

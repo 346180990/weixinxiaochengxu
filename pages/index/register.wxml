@@ -1,0 +1,29 @@
+
+<view class='container'>
+  <view class='header'>
+    <text>注册</text>
+  </view>
+  <form bindsubmit="formSubmit">
+    <view class='section'>
+      <text>工号：</text>
+      <input type='number' placeholder='请输入工号' name="no" value='{{employNo}}' disabled="true" style="color:silver"/>
+    </view>
+    <view class='section'>
+      <text>姓名：</text>
+      <input type='number' placeholder='请输入姓名' name="name" value='{{name}}'/>
+    </view>
+    <text style="color: red;">{{text}}</text>
+    <view class="page__bd">
+      <view class="section section_gap">
+          <radio-group class="radio-group" bindchange="radioChange">
+              <radio class="radio" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+                  <text>{{item.value}}</text>
+              </radio>
+          </radio-group>
+      </view>
+    </view>
+    <view class='button'>
+      <button type='primary' form-type='submit'>注册</button>
+    </view>
+  </form>
+</view>

@@ -1,0 +1,4 @@
+<!--pages/index/waitRule.wxml-->
+<text>等待管理员处理</text>
+<text>管理员微信：132301661424</text>
+<button type='primary' form-type='submit' bindtap="click">返回登录</button>  
